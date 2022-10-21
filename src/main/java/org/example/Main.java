@@ -1,5 +1,6 @@
 package org.example;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 import java.lang.String;
@@ -14,7 +15,7 @@ class Pangram {
         String nextline3 = nextline2.replace(".", "");
         char x[] = nextline3.toUpperCase().toCharArray();
         int size = x.length;
-        int y[] = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+        int y[] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 
         int i;
         for (i = 0; i < size; i++) {
@@ -39,13 +40,31 @@ class Pangram {
             System.out.println("false");
         }
 
+        class PangramBatchCheck {
+
+            List<String> pangramCheckArgs = List.of("fdfdfdfdfd", "dfdfdfdfd", "he quick brown fox jumps over the lazy dog", "dfdfdf");
+            List<Boolean> resList = new ArrayList<>();
+
+            List<Boolean> pangramBatchCheck(List<String> listOfPangrams) {
+
+                for(int i = 0; i < listOfPangrams.size(); i++){
+                    String stringBuffer = listOfPangrams.indexOf(i);
+                }
+
+                return resList;
+
+            };
+
+
+
+
+
+
+
+        }
+
+
     }
 
-    public static List<Boolean> batchPangram(List<String> isPangram){
-        List<String> pangramCheckArgs = List.of("fdfdfdfdfd", "dfdfdfdfd", "he quick brown fox jumps over the lazy dog", "dfdfdf");
-        List<Boolean> pangramCheckRes = List.of(true, false, false, false);
-        return pangramCheckRes;
-
-    }
 
 }
