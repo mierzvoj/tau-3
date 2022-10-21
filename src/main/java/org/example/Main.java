@@ -41,8 +41,12 @@ class Pangram {
         }
 
         PangramBatchCheck pbc = new PangramBatchCheck();
-        pbc.setPangramCheckArgs();
+        List<String[]> li = new ArrayList<String[]>();
+        li.add(new String[]{"dsdsdsd", "dsdsdsdf", "lazy fox"});
 
+        pbc.setPangramCheckArgs(li);
+
+        pbc.isPangram();
 
     }
 
@@ -50,14 +54,14 @@ class Pangram {
         public List<String[]> pangramCheckArgs;
 
         public void setPangramCheckArgs(List<String[]> batchArgs) {
-            this.pangramCheckArgs = pangramCheckArgs;
+            this.pangramCheckArgs = batchArgs;
 
         }
 
         boolean isPangram() {
             for (int i = 0; i < pangramCheckArgs.size(); i++) {
                 String stringBuffer[] = pangramCheckArgs.get(i);
-                System.out.println(stringBuffer);
+                System.out.println(toString(stringBuffer));
             }
             return true;
         }
@@ -66,3 +70,4 @@ class Pangram {
     }
 
 }
+
