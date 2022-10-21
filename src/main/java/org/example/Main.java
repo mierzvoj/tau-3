@@ -40,31 +40,29 @@ class Pangram {
             System.out.println("false");
         }
 
-        class PangramBatchCheck {
-
-            List<String> pangramCheckArgs = List.of("fdfdfdfdfd", "dfdfdfdfd", "he quick brown fox jumps over the lazy dog", "dfdfdf");
-            List<Boolean> resList = new ArrayList<>();
-
-            List<Boolean> pangramBatchCheck(List<String> listOfPangrams) {
-
-                for(int i = 0; i < listOfPangrams.size(); i++){
-                    String stringBuffer = listOfPangrams.indexOf(i);
-                }
-
-                return resList;
-
-            };
-
-
-
-
-
-
-
-        }
+        PangramBatchCheck pbc = new PangramBatchCheck();
+        pbc.setPangramCheckArgs();
 
 
     }
 
+    public  static class PangramBatchCheck {
+        public List<String[]> pangramCheckArgs;
+
+        public void setPangramCheckArgs(List<String[]> batchArgs) {
+            this.pangramCheckArgs = pangramCheckArgs;
+
+        }
+
+        boolean isPangram() {
+            for (int i = 0; i < pangramCheckArgs.size(); i++) {
+                String stringBuffer[] = pangramCheckArgs.get(i);
+                System.out.println(stringBuffer);
+            }
+            return true;
+        }
+
+
+    }
 
 }
